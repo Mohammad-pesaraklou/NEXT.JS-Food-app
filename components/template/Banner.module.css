@@ -1,0 +1,46 @@
+.container {
+  display: flex;
+  align-items: center;
+}
+.image {
+  width: 500px;
+  height: 500px;
+}
+.btn {
+  border: none;
+  background-color: #53c60b;
+  padding: 10px 30px;
+  border-radius: 10px;
+  color: whitesmoke;
+  font-size: 16px;
+  margin: 10px 0px;
+  font-weight: 600;
+}
+.btn:hover {
+  cursor: pointer;
+  background-color: aliceblue;
+  color: #53c60b;
+  transition: all 0.3s ease-in;
+}
+.left span {
+  line-height: 25px;
+  color: #010d26;
+}
+.left h2 {
+  color: #010d26;
+  border-bottom: 2px solid #53c60b;
+  width: 105px;
+}
+.left p {
+  padding: 15px 0px;
+  font-weight: 600;
+}
+@media (max-width: 500px) {
+  .container {
+    flex-direction: column;
+  }
+  .image {
+    width: 400px;
+    height: 400px;
+  }
+}
