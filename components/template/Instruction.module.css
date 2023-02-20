@@ -1,25 +1,26 @@
 .container {
-    margin-bottom: 100px;
-  }
-  
-  .container h3 {
-    font-size: 1.5rem;
-    color: #53c60b;
-    margin: 24px 0;
-  }
-  
-  .container ul {
-    padding: 0;
-  }
-  
-  .container li {
-    font-size: 1.1rem;
-    font-weight: 500;
-    line-height: 30px;
-    list-style: none;
-  }
-  
-  .container li::before {
-    content: "• ";
-    color: #53c60b;
-  }
+  margin-bottom: 100px;
+}
+
+.container h3 {
+  font-size: 1.5rem;
+  color: #53c60b;
+  margin: 24px 0;
+}
+
+.container ul {
+  padding: 0;
+}
+
+.container li {
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 30px;
+  list-style: none;
+  color: #eceef3;
+}
+
+.container li::before {
+  content: "• ";
+  color: #53c60b;
+}

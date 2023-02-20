@@ -3,7 +3,6 @@ import axios from "axios";
 import React from "react";
 
 const Category = ({ filteredData }) => {
-  console.log(filteredData);
   return (
     <div>
       <CategoryPage data={filteredData} />
@@ -18,7 +17,7 @@ export async function getServerSideProps(context) {
     query: { difficulty, time, cuisine },
   } = context;
 
-  const { data } = await axios("http://localhost:4000/data");
+  const { data } = await axios(`${process.env.BASE_URL}`);
 
   const filteredValue = data.filter((item) => {
     const difficultyFiltered = item.details.filter(

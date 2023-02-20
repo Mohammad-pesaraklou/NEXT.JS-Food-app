@@ -1,4 +1,5 @@
 import Navbar from "./Navbar"
+import styles from "./Layout.module.css";
 
 function Layout({ children }) {
     return (
@@ -6,9 +7,12 @@ function Layout({ children }) {
             <header>
                 <Navbar />
             </header>
-            <main style={{minHeight: "100px"}}>
+            <main className={styles.container}>
                 {children}
             </main>
+            <footer className={styles.footer}>
+                Next.js Food App | ATEFood Project &copy;
+            </footer>
         </div>
     )
 }

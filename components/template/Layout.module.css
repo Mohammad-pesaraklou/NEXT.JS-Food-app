@@ -15,19 +15,21 @@
 
 .right a {
   margin-left: 15px;
-  color: #eceef3;
+  color: dimgrey;
   font-weight: 500;
-  border-bottom: 1px solid #53c60b;
-  padding: 7px 5px;
 }
-.right a:hover {
+
+.footer {
   background-color: #53c60b;
-  /* border: 1px solid #53c60b; */
-  color: #00040b;
-  border: none;
-  border-radius: 7px;
-  padding: 7px 15px;
-  transition: all 0.5s ease-in-out;
+  text-align: center;
+  color: #eceef3;
+  padding: 10px 0;
+  margin-top: 30px;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #234a0b;
 }
 
 .container {

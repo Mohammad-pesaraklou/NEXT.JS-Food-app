@@ -10,6 +10,7 @@
   padding: 15px 50px;
   border-radius: 10px;
   cursor: pointer;
+  color: #eceef3;
 }
 
 @media (max-width: 900px) {

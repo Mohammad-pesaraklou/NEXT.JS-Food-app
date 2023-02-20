@@ -13,11 +13,11 @@ const Foods = ({ foods }) => {
 export default Foods;
 
 export async function getStaticProps() {
-  const req = await axios("http://localhost:4000/data");
+  const req = await axios(`${process.env.BASE_URL}`);
   return {
     props: {
       foods: req.data,
-      revalidate: process.env.NEXT_PUBLIC_APP_REVALIDATE_NUMBER,
+      revalidate: +process.env.REVALIDATE_NUMBER,
     },
   };
 }

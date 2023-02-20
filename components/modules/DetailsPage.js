@@ -63,8 +63,10 @@ function DetailsPage(props) {
           <h4>Recipe</h4>
           {recipe.map((item, index) => (
             <div key={index} className={index % 2 ? styles.odd : styles.even}>
-              <span>{index + 1}</span>
-              <p>{item}</p>
+              <span style={{ color: " rgba(0, 0, 0, 0.934)" }}>
+                {index + 1}
+              </span>
+              <p style={{ color: " rgba(0, 0, 0, 0.934)" }}>{item}</p>
             </div>
           ))}
         </div>

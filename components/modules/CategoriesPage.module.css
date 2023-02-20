@@ -3,7 +3,9 @@
   margin: auto;
   margin-top: 100px;
 }
-
+.optionItem {
+  color: black;
+}
 .container h2 {
   border-bottom: 5px solid #53c60b;
   width: fit-content;

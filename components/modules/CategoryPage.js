@@ -37,24 +37,64 @@ const CategoryPage = ({ data }) => {
             value={query.difficulty}
             name="difficulty"
             onChange={changeHandler}
+            style={{ color: "black" }}
           >
-            <option value="">Difficulty</option>
-            <option value="Easy">Easy</option>
-            <option value="Medium">Medium</option>
-            <option value="Hard">Hard</option>
+            <option className={styles.optionItem} value="">
+              Difficulty
+            </option>
+            <option className={styles.optionItem} value="Easy">
+              Easy
+            </option>
+            <option className={styles.optionItem} value="Medium">
+              Medium
+            </option>
+            <option className={styles.optionItem} value="Hard">
+              Hard
+            </option>
           </select>
-          <select value={query.time} name="time" onChange={changeHandler}>
-            <option value="">Cooking Time</option>
-            <option value="more">More than 30 min</option>
-            <option value="less">Less than 30 min</option>
+          <select
+            style={{ color: "black" }}
+            value={query.time}
+            name="time"
+            onChange={changeHandler}
+          >
+            <option className={styles.optionItem} value="">
+              Cooking Time
+            </option>
+            <option className={styles.optionItem} value="more">
+              More than 30 min
+            </option>
+            <option className={styles.optionItem} value="less">
+              Less than 30 min
+            </option>
           </select>
-          <select value={query.cuisine} name="cuisine" onChange={changeHandler}>
-            <option value="">Cuisine</option>
-            <option value="Malaysian">Malaysian</option>
-            <option value="British">British</option>
-            <option value="Japanese">Japanese</option>
-            <option value="Italian">Italian</option>
-            <option value="Chinese">Chinese</option>
+          <select
+            style={{ color: "black" }}
+            value={query.cuisine}
+            name="cuisine"
+            onChange={changeHandler}
+          >
+            <option className={styles.optionItem} value="">
+              Cuisine
+            </option>
+            <option className={styles.optionItem} value="Malaysian">
+              Malaysian
+            </option>
+            <option className={styles.optionItem} value="British">
+              British
+            </option>
+            <option className={styles.optionItem} value="Japanese">
+              Japanese
+            </option>
+            <option className={styles.optionItem} value="Italian">
+              Italian
+            </option>
+            <option className={styles.optionItem} value="Chinese">
+              Chinese
+            </option>
+            <option className={styles.optionItem} value="American">
+              American
+            </option>
           </select>
           <button onClick={searchHandler}>Search</button>
         </div>

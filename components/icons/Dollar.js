@@ -1,6 +1,15 @@
 function Dollar() {
   return (
-    <svg width="40px" height="25px" viewBox="0 0 512 512">
+    <svg
+      width="40px"
+      height="25px"
+      viewBox="0 0 512 512"
+      style={{
+        backgroundColor: "white",
+        borderRadius: "10px",
+        marginRight: "10px",
+      }}
+    >
       <g>
         <path
           className="st0"

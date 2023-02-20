@@ -4,13 +4,11 @@ import { useRouter } from "next/router";
 import React from "react";
 
 const FoodDetails = ({ data }) => {
-  console.log(data);
   const router = useRouter();
   if (router.isFallback) {
     return <h1>loading...</h1>;
   }
 
-  console.log(data);
   return (
     <div>
       <DetailsPage {...data} />
@@ -29,9 +27,7 @@ const FoodDetails = ({ data }) => {
 // }
 
 // export async function getStaticProps({ params }) {
-//   console.log(params);
 //   const req = await axios(`http://localhost:4000/data/${params.id}`);
-//   console.log(req);
 //   return {
 //     props: {
 //       data: req.data,
@@ -41,7 +37,7 @@ const FoodDetails = ({ data }) => {
 
 export async function getServerSideProps(context) {
   const { params } = context;
-  const req = await axios(`http://localhost:4000/data/${params.id}`);
+  const req = await axios(`${process.env.BASE_URL}/${params.id}`);
   return {
     props: {
       data: req.data,
