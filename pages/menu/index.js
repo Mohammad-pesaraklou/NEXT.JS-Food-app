@@ -3,6 +3,12 @@ import axios from "axios";
 import React from "react";
 
 const Foods = ({ foods }) => {
+  const x = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+  const y = x.map((i) => console.log(i));
+
+  console.log(y);
+
   return (
     <div>
       <MenuPage data={foods} />

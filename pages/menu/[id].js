@@ -8,6 +8,7 @@ const FoodDetails = ({ data }) => {
   if (router.isFallback) {
     return <h1>loading...</h1>;
   }
+  console.log(data);
 
   return (
     <div>
@@ -27,21 +28,25 @@ const FoodDetails = ({ data }) => {
 // }
 
 // export async function getStaticProps({ params }) {
-//   const req = await axios(`http://localhost:4000/data/${params.id}`);
+//   const req = await fetch(`http://localhost:4000/data/${params.id}`);
+//   const res = await req.json();
+//   console.log(res);
 //   return {
 //     props: {
-//       data: req.data,
+//       data: res,
 //     },
 //   };
 // }
 
-export async function getServerSideProps(context) {
-  const { params } = context;
-  const req = await axios(`${process.env.BASE_URL}/${params.id}`);
+export async function getServerSideProps({ params }) {
+  const req = await fetch(`${process.env.BASE_URL}/${params.id}`);
+  const res = await req.json();
+  console.log(res);
   return {
     props: {
-      data: req.data,
+      data: res,
     },
   };
 }
+
 export default FoodDetails;
